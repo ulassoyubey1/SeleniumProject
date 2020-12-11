@@ -21,5 +21,7 @@ public class Browser {
     public void MaximizeWindow(){
         _driver.manage().window().maximize();
     }
+    public void QuitBrowserCompletely(){_driver.quit();}
 }
+
 

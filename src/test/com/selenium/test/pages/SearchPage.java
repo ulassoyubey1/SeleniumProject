@@ -12,7 +12,7 @@ public class SearchPage extends BasePage {
         super();
     }
 
-    @FindBy(how = How.XPATH,using = "(//img[@class='p-card-img'])[1]")
+    @FindBy(how = How.XPATH,using = "(//img[@class='p-card-img'])[5]")
     public WebElement firstProductImg;
 
     public ProductPage clickFirstProduct(){

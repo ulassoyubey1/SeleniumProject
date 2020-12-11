@@ -33,11 +33,11 @@ public class BasketPage extends BasePage {
     }
     public void checkQuantity(int quantity){
         try{
-            WebDriverWait wait = new WebDriverWait(DriverContext.Driver,30);
+            WebDriverWait wait = new WebDriverWait(DriverContext.Driver,15);
             wait.until(ExpectedConditions.textToBePresentInElementValue(quantityInBaset,Integer.toString(quantity)));
             logUtil.infoLog("Current items added on basket:" + quantity);
         }catch (Exception e){
-            logUtil.warn("Item has only one stock");
+            logUtil.error("Item has only one stock");
             throw e;
         }
     }

@@ -7,6 +7,7 @@ import com.trendyolselenium.framework.config.ConfigReader;
 import com.trendyolselenium.framework.config.Settings;
 import com.trendyolselenium.framework.utilities.ExcelUtil;
 import jxl.read.biff.BiffException;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -46,6 +47,9 @@ public class TestiniumProjectTest extends FrameworkInitiliaizer {
         CurrentPage.As(BasketPage.class).CheckAllItemsDeleted();
 
      }
-
+    @After
+    public void Teardown(){
+        DriverContext.Browser.QuitBrowserCompletely();
+    }
 
 }
