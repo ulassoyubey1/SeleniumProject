@@ -13,4 +13,15 @@ public class logUtil {
     public static void error(String message){
         Log.error(message);
     }
+    public static void InitializeTest(){
+        Log.info("---------------------------------------------------------");
+        Log.info("Test is about to start");
+        Log.info("---------------------------------------------------------");
+    }
+    public static void TestEnding(){
+        Log.info("---------------------------------------------------------");
+        Log.info("Test is about to end");
+        Log.info("---------------------------------------------------------");
+    }
+
 }

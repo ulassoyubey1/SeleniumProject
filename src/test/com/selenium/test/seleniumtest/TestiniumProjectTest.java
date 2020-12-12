@@ -6,6 +6,7 @@ import com.trendyolselenium.framework.base.FrameworkInitiliaizer;
 import com.trendyolselenium.framework.config.ConfigReader;
 import com.trendyolselenium.framework.config.Settings;
 import com.trendyolselenium.framework.utilities.ExcelUtil;
+import com.trendyolselenium.framework.utilities.logUtil;
 import jxl.read.biff.BiffException;
 import org.junit.After;
 import org.junit.Assert;
@@ -17,6 +18,7 @@ import java.io.IOException;
 public class TestiniumProjectTest extends FrameworkInitiliaizer {
     @Before
     public void Initialize() throws IOException, BiffException {
+        logUtil.InitializeTest();
         ConfigReader.PopulateSettings();
         OpenBrowser(Settings.BrowserType);
         DriverContext.Browser.GoToUrl(Settings.firstUrl);
@@ -49,6 +51,7 @@ public class TestiniumProjectTest extends FrameworkInitiliaizer {
      }
     @After
     public void Teardown(){
+        logUtil.TestEnding();
         DriverContext.Browser.QuitBrowserCompletely();
     }
 
